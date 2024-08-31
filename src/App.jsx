@@ -1,12 +1,17 @@
+import Conditional from "./components/Conditional";
+import Description from "./components/Description";
 import Render from "./components/Render";
-
-
+import { createContext } from "react";
+import Header from "./components/Header";
 function App() {
-
+console.log(createContext())
   
   return (
     <div>
     <Render/>
+    <Conditional/>
+    <Header/>
+    <Description/>
     </div>
   );
 }

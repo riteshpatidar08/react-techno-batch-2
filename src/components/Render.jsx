@@ -7,6 +7,7 @@ function Render() {
   const [countryData, setCountryData] = useState([]);
   const [countryName, setCountryName] = useState('');
 
+
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all')
       .then((res) => {
