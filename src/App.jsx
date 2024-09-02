@@ -1,24 +1,22 @@
-import Conditional from "./components/Conditional";
-import Description from "./components/Description";
-import Render from "./components/Render";
-import { createContext } from "react";
-import Header from "./components/Header";
+import React from 'react'
+import { Routes , Route } from 'react-router-dom' ;
+import Homepage from './pages/Homepage';
+import Services from './pages/Services';
+import Navbar from './components/Navbar';
+import NotFound from './components/NotFound';
+import Ref from './components/Ref'
 function App() {
-console.log(createContext())
-  
   return (
     <div>
-    <Render/>
-    <Conditional/>
-    <Header/>
-    <Description/>
+      <Navbar/>
+      <Ref/>
+     <Routes>
+      <Route path='/' element={<Homepage/>} />
+      <Route path='/services' element={<Services/>} />
+      <Route path="*" element={<NotFound/>}/>
+      </Routes> 
     </div>
-  );
+  )
 }
 
-export default App;
-
-
-//NOTE useState is used when you want to change or update data on the screen
-//NOTE useState is a function which you have to call.
-//NOTE State = data which changes over time
+export default App
