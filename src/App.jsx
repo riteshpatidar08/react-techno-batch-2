@@ -5,13 +5,15 @@ import Services from './pages/Services';
 import Navbar from './components/Navbar';
 import NotFound from './components/NotFound';
 import Ref from './components/Ref'
+import Reducer from './pages/Reducer';
 function App() {
   return (
     <div>
       <Navbar/>
-      <Ref/>
+     
      <Routes>
       <Route path='/' element={<Homepage/>} />
+      <Route path='/reducer' element={<Reducer/>}/>
       <Route path='/services' element={<Services/>} />
       <Route path="*" element={<NotFound/>}/>
       </Routes> 
